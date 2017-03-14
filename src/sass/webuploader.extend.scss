@@ -1,0 +1,110 @@
+.webuploaer {
+    width: 100%;
+    $item-margin: 5px;
+    // 回显容器
+    .uploader-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        // 回显缩略图
+        .thumbnail {
+            margin: $item-margin;
+            position: relative;
+            & > *:not(img) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                overflow: hidden;
+                font-weight: 100;
+                color: #fff;
+                font-size: 12px;
+                text-align: center;
+            }
+            .progress{
+                z-index: 1;
+                background-color: rgba(100, 190, 247, 0.9);
+                transition: '0.5s width';
+            }
+            .info {
+                background-color: rgba(100, 190, 247, 0.9);
+                z-index: 0;
+            }
+            .error {
+                background-color: rgba(232, 74, 74, 0.9);
+                z-index: 2;
+                text-align: center;
+            }
+            .success {
+                background-color: rgba(99, 209, 93, 0.9);
+                z-index: 3;
+            }
+            .file-remove{
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                background-color: rgba(0, 0, 0, 0.5);
+                top: 0;
+                right: 0;
+                left: auto;
+                z-index: 3;
+                &::after{
+                    content: 'x';
+                    color: #fff;
+                    font-style: normal;
+                    font-family: BlinkMacSystemFont;
+                }
+            }
+        }
+    }
+    // 增加按钮
+    .uploader-pick {
+        $color: #ddd;
+        border: solid 2px $color;
+        box-sizing: border-box;
+        position: relative;
+        cursor: pointer;
+        margin: $item-margin;
+        color: $color;
+        font-size: 50px;
+        font-weight: 100;
+        text-align: center;
+        overflow: hidden;
+        * {
+            width: 100% !important;
+            height: 100% !important;
+            opacity: 0;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .webuploader-pick{
+            opacity: 1;
+        }
+    }
+    // 上传按钮
+    .uploader-control {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > * {
+            width: 40px;
+            height: 20px;
+            line-height: 20px;
+            border-radius: 5px;
+            margin: 10px;
+            text-align: center;
+            background-color: rgb(88, 150, 232);
+            color: #fff;
+            padding: 5px 10px;
+            cursor: pointer;
+            display: none;
+        }
+        > .uploader-retry {
+            background-color: #d65858;
+        }
+    }
+}

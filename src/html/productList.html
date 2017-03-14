@@ -1,0 +1,65 @@
+{% extends "./layout/default.html"%} 
+
+{% block title%}产品列表{% endblock %} 
+
+{% block style%}
+<!--<style scoped>
+
+</style>-->
+{% endblock %} 
+
+{% block main %}
+<div class="page-group">
+
+    <div class="page page-current">
+
+        <header class="bar bar-nav">
+            <h1 class="title">产品列表</h1>
+        </header>
+        
+        <div class="content infinite-scroll infinite-scroll-bottom">
+            <div class="list-container">
+                <!-- 这里进行懒加载的无限滚动 -->
+            </div>
+           
+                <!-- 加载提示符 -->
+            <div class="infinite-scroll-preloader">
+                <div class="preloader"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Popup 弹出商品详情 -->
+<div class="popup product-popup" >
+    <header class="bar bar-nav">
+        <button class="button pull-right close-popup">
+            关闭
+        </button>
+        <h1 class="title">商品详情</h1>
+    </header>
+    <div class="card demo-card-header-pic">
+        <div valign="bottom" class="card-header color-white no-border no-padding">
+            <img class="card-cover" src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg">
+        </div>
+        <div class="card-content">
+            <div class="card-content-inner">
+                <p class="item-info">价格 <span class="item-price">13</span></p>
+                <p class="color-gray">发表于 2015/01/15</p>
+                <p>此处是内容...</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="#" class="link">赞</a>
+            <a href="#" class="link">更多</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="../js/productList.js"></script>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+ @import "./layout/public.scss";
+ .register {
+     text-align: center;
+     .jionus-img{
+         width: 90%;
+     }
+     .inputbox {
+         height: 2rem;
+         position: relative;
+         display: flex;
+         justify-content: left;
+         align-items: center;
+         outline: none;
+         overflow: hidden;
+         float: left;
+         width: 100%;
+         .fa {
+             z-index: 1;
+             position: relative;
+             font-size: 1.6rem;
+             margin-left: .5rem;
+         }
+         input {
+             font-size: .8rem;
+             text-indent: 1.4rem;
+             border: 2px solid #d0cdcd;
+             border-radius: 10px;
+             width: 100%;
+             height: 100%;
+             position: absolute;
+             top: 0;
+             left: 0;
+             z-index: 0;
+             background: $ui-color-background;
+         }
+     }
+     .code {
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         align-items: stretch;
+         >* {
+             margin-bottom: 0;
+         }
+     }
+     .get-code-btn {
+         background: $ui-color-background;
+         font-size: .6rem;
+         border: 1px solid #999;
+         border-radius: 10px;
+         color: #555;
+         margin: .1rem;
+         margin-left: .3rem;
+         white-space: nowrap;
+         width:6rem;
+     }
+ }
