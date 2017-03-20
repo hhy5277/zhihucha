@@ -3,6 +3,7 @@ $ui-color-background:#f5ebdc;
 
 $ui-color-disabled: rgba($color:black, $alpha:.24);
 $ui-border: 1px solid #ddd;
+$ui-input-border-color:#bbb;
 // 单位转换
 @function rem($px) {
     @return $px / 20px * 1rem;

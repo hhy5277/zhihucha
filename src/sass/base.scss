@@ -26,6 +26,13 @@
     display: block;
 }
 
+.topimg{
+    display: block;
+    margin: 0 auto;
+    margin-top: .5rem;
+    width: 90%;
+}
+
 .form-control {
     width: 70%;
     margin: 0 auto;
@@ -34,7 +41,7 @@
     }
     .form-btn {
         border-radius: 8px;
-        border: 1px solid #c3c2c2;
+        border: 1px solid $ui-input-border-color;
         text-align: center;
         background: $ui-color-background;
         width: 100%;
