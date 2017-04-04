@@ -8,7 +8,7 @@
     margin-top: 1rem;
     margin-bottom: 2rem;
     button {
-        width: 100%;
+        // width: 100%;
         padding: .3rem 1.2rem;
         background: #1f3c1f;
         color: white;
@@ -21,12 +21,11 @@
 
 .logo-bottom {
     margin: 0 auto;
-    // margin-top: 2rem;
-    width: 5rem;
+    width: 3rem;
     display: block;
 }
 
-.topimg{
+.topimg {
     display: block;
     margin: 0 auto;
     margin-top: .5rem;
@@ -50,14 +49,6 @@
         font-weight: lighter;
         color: #555;
     }
-}
-
-// 交互容器，位于屏幕底部
-.control {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
 }
 
 // 卡片 列表
@@ -86,5 +77,13 @@
         &:before {
             content: 'x'
         }
+    }
+}
+
+.flex {
+    display: flex;
+    &.flex-center {
+        justify-content: center;
+        align-items: center;
     }
 }
