@@ -55,6 +55,15 @@
         font-weight: lighter;
         color: #555;
     }
+    textarea{
+        @include item;
+        height: 3rem;
+        text-align: left;
+        font-size: .6rem;
+    }
+    input,textarea{
+        text-indent: .5rem;
+    }
     .form-item{
         display: flex;
         align-items: center;
@@ -73,13 +82,6 @@
         @include item;
         font-size: .6rem;
         text-align: left;
-    }
-    textarea{
-        @include item;
-        height: 3rem;
-        text-align: left;
-        text-indent: .5rem;
-        font-size: .6rem;
     }
 }
 
