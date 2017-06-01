@@ -1,0 +1,8 @@
+.cart-list{
+    $border: 1px dashed rgba(black, .2);
+    border-top: $border;
+    border-bottom: $border;
+    >img{
+        margin: 0 .8rem;
+    }
+}

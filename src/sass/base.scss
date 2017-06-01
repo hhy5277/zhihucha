@@ -1,4 +1,63 @@
 @import "./layout/public.scss";
+//高度100%
+.vh-100 {
+    height: 100vh;
+}
+.h-100{
+    height: 100%;
+}
+
+// display
+.inline-block {
+    display: inline-block !important;
+}
+.block {
+    display: block !important;
+}
+.inline{
+    display: inline !important;
+}
+
+
+// position
+.relative {
+    position: relative !important;
+}
+
+.absolute {
+    position: absolute !important;
+}
+
+// 文本居中
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.nowarp {
+    white-space: nowrap !important;
+}
+
+// overflow
+.overflow-auto {
+    overflow: auto !important;
+}
+
+.overflow-hide {
+    overflow: hidden !important;
+}
+
+.overflow-visible{
+    overflow: visible;
+}
+
 .background-page {
     background-size: cover;
 }
@@ -122,5 +181,138 @@
     }
     &.column{
         flex-direction: column;
+        &.column-col-top {
+            justify-content: flex-start;
+        }
+        &.column-col-bottom {
+            justify-content: flex-end;
+        }
+        &.column-col-center {
+            justify-content: center;
+        }
+        &.column-col-between {
+            justify-content: space-between;
+        }
+        &.column-col-around {
+            justify-content: space-around;
+        } //横向对齐方式
+        &.column-row-left {
+            align-items: flex-start;
+        }
+        &.column-row-right {
+            align-items: flex-end;
+        }
+        &.column-row-center {
+            align-items: center;
+        }
+        &.column-row-baseline {
+            align-items: baseline;
+        }
+        &.column-row-stretch {
+            align-items: stretch;
+        }
+    }
+    >*.item{
+        flex:1
+    }
+    &.row-left {
+        justify-content: flex-start;
+    }
+    &.row-right {
+        justify-content: flex-end;
+    }
+    &.row-center {
+        justify-content: center;
+    }
+    &.row-between {
+        justify-content: space-between;
+    }
+    &.row-around {
+        justify-content: space-around;
+    } //纵向对齐方式
+    &.col-top {
+        align-items: flex-start;
+    }
+    &.col-bottom {
+        align-items: flex-end;
+    }
+    &.col-center {
+        align-items: center;
+    }
+    &.col-baseline {
+        align-items: baseline;
+    }
+    &.col-stretch {
+        align-items: stretch;
+    }
+}
+
+.popup-shade{
+    background: rgba(black, .4);
+}
+
+.number-pag{
+    display: flex;
+    justify-content: center;
+    >input{
+        margin: 0 0.5rem;
+        text-align: center;
+    }
+    >.button{
+        background: white;
+    }
+}
+
+.rmb{
+    &::before{
+        content: '￥',
+    }
+}
+
+@for $i from 0 through 10 {
+    .m#{$i} {
+        margin: #{$i}rem !important;
+    }
+    .mt#{$i} {
+        margin-top: #{$i}rem !important;
+    }
+    .mr#{$i} {
+        margin-right: #{$i}rem !important;
+    }
+    .mb#{$i} {
+        margin-bottom: #{$i}rem !important;
+    }
+    .ml#{$i} {
+        margin-left: #{$i}rem !important;
+    }
+    .p#{$i} {
+        padding: #{$i}rem !important;
+    }
+    .pt#{$i} {
+        padding-top: #{$i}rem !important;
+    }
+    .pr#{$i} {
+        padding-right: #{$i}rem !important;
+    }
+    .pb#{$i} {
+        padding-bottom: #{$i}rem !important;
+    }
+    .pl#{$i} {
+        padding-left: #{$i}rem !important;
+    }
+}
+
+@for $i from 1 through 20 {
+    @if $i < 10{
+        // 1rem以下的单位: f01~f09
+        .f0#{$i} {
+            font-size: $i * 0.1rem !important;
+        }
+    }
+    @else {
+        // 1rem以上含1rem: f10~f20
+        .f#{$i} {
+            font-size: $i * 0.1rem !important;
+        }
     }
 }

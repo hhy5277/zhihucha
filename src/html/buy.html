@@ -1,0 +1,89 @@
+{% extends "./layout/default.html"%} 
+
+{% block title%}产品列表{% endblock %} 
+
+
+{% block main %}
+<div class="page-group">
+    <div class="page page-current">
+        <header class="bar bar-nav">
+            <h1 class="title">购买产品</h1>
+        </header>
+
+        <div class="content">
+            <!-- Slider -->
+            <div class="swiper-container overflow-visible" data-space-between="10">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1n3rZHFXXXXX9XFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" style="width:100%;">
+                        <p class="text-center mb0 absolute" style="right:0;left:0;bottom:-2rem;">眯眼</p>
+                    </div>
+                    <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i4/TB10rkPGVXXXXXGapXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg"
+                            style="width:100%;">
+                        <p class="text-center mb0 absolute" style="right:0;left:0;bottom:-2rem;">弥彦</p>
+                    </div>
+                    <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1kQI3HpXXXXbSXFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg"
+                            style="width:100%;">
+                        <p class="text-center mb0 absolute" style="right:0;left:0;bottom:-2rem;">密言</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block script %}
+<script>
+    $(function() {
+      $(".swiper-container").swiper({
+          autoplay:5000,
+          loop: true,
+          // 如果需要分页器
+        //   pagination: '.swiper-pagination',
+
+          // 如果需要前进后退按钮
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+      });
+    });
+    // 打开购买
+    $(document).on('click', '.buy', function () {
+        var modal = $.modal({
+            title: '标题',
+            text: '显示5个字',
+            afterText: `
+            <div class="flex column">
+                <img src="../images/logo.png" style="height:5rem; margin:0 auto;">
+                <div class="number-pag">
+                    <button class="button lower">-</button>
+                    <input value="0" type="number" style="width:5rem">
+                    <button class="button add">+</button>
+                </div>
+                <p class="total rmb">250.00</p>
+            </div>`,
+            buttons: [
+                {
+                    text: '再看看 :('
+                },
+                {
+                    text: '买买买!',
+                    bold: true,
+                    onClick: function () {
+                        $.alert('Thanks! I know you like it!')
+                    }
+                },
+            ]
+        })
+    });
+
+</script>
+{% endblock %}
