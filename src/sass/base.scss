@@ -255,7 +255,7 @@
     display: flex;
     justify-content: center;
     >input{
-        margin: 0 0.5rem;
+        // margin: 0 0.5rem;
         text-align: center;
     }
     >.button{
@@ -315,4 +315,9 @@
             font-size: $i * 0.1rem !important;
         }
     }
+}
+
+
+.bg-white{
+    background-color: white;
 }

@@ -3,12 +3,25 @@
 {% block title%}购物车{% endblock %} 
 
 {% block style%}
-<link rel="stylesheet" href="../css/cart.css"> 
+<style scoped>
+    .cart-list{
+        border-top: 1px dashed rgba(0,0,0, .2);
+        border-bottom: 1px dashed rgba(0,0,0, .2);
+        padding: .7rem 0;
+        margin: 0 1rem;
+        color: #888;
+    }
+    .cart-img{
+        margin: 0 .8rem;
+        height:4rem;
+    }
+</style>
 {% endblock %} 
 
 {% block main %}
 <div class="page-group">
-    <div class="page page-current">
+    <div class="page page-current bg-white">
+
         <header class="bar bar-nav">
             <button class="button button-link button-nav pull-left">
               <span class="icon icon-left"></span>
@@ -18,16 +31,16 @@
         </header>
 
         <ul class="content p0 m0">
-            <li class="flex pb1 pt1 cart-list">
-                <img src="../images/logo.png" style="height:4rem;">
+            <li class="flex cart-list">
+                <img src="../images/logo.png" class="cart-img">
                 <div class="flex column column-col-around f07 item">
                     <span>红茶 xxx</span>
                     <span>规格: <span>239g</span></span>
                     <div class="flex">
                         <div class="number-pag">
-                            <button class="button lower">-</button>
+                            <button class="button lower"><i class="fa fa-angle-left"></i></button>
                             <input value="0" type="number" style="width:2rem">
-                            <button class="button add">+</button>
+                            <button class="button add"><i class="fa fa-angle-right"></i></button>
                         </div>
                         <p class="total rmb m0 ml1 flex col-center">250.00</p>
                     </div>
