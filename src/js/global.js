@@ -10,5 +10,8 @@ $(document).on('click', '.number-pag > .button', function () {
 })
 
 $(document).on('click','.modal-custom',function(e){
-    $(this).addClass('hide')
+    let $modal = $(e.target)
+    if ($modal.hasClass('modal-custom')) {
+        $modal.addClass('hide')
+    }
 })
