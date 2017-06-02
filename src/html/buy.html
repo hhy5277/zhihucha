@@ -54,7 +54,7 @@
     </div>
 </div>
 
-<div class="modal-custom">
+<div class="modal-custom hide">
     <div class="flex modal-body">
         <div class="flex row-center col-center item">
             <img src="../images/logo.png" style="height:5rem; margin:0 auto;">
@@ -91,36 +91,42 @@
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
         });
-    }); 
-    // 打开购买
-    /*$(document).on('click', '.swiper-slide', function () {
-        $.modal({
-            title: '标题',
-            text: '显示5个字',
-            afterText: `
-            <div class="flex column">
-                <img src="../images/logo.png" style="height:5rem; margin:0 auto;">
-                <div class="number-pag">
-                    <button class="button lower">-</button>
-                    <input value="0" type="number" style="width:5rem">
-                    <button class="button add">+</button>
-                </div>
-                <p class="total rmb">250.00</p>
-            </div>`,
-            buttons: [
-                {
-                    text: '再看看 :('
-                },
-                {
-                    text: '买买买!',
-                    bold: true,
-                    onClick: function () {
-                        $.alert('Thanks! I know you like it!')
-                    }
-                },
-            ]
-        })
-    });*/
+        // 打开购买
+        /*$(document).on('click', '.swiper-slide', function () {
+            $.modal({
+                title: '标题',
+                text: '显示5个字',
+                afterText: `
+                <div class="flex column">
+                    <img src="../images/logo.png" style="height:5rem; margin:0 auto;">
+                    <div class="number-pag">
+                        <button class="button lower">-</button>
+                        <input value="0" type="number" style="width:5rem">
+                        <button class="button add">+</button>
+                    </div>
+                    <p class="total rmb">250.00</p>
+                </div>`,
+                buttons: [
+                    {
+                        text: '再看看 :('
+                    },
+                    {
+                        text: '买买买!',
+                        bold: true,
+                        onClick: function () {
+                            $.alert('Thanks! I know you like it!')
+                        }
+                    },
+                ]
+            })
+        });*/
 
+
+
+        // 打开自定义弹出层
+        $(document).on('click','.swiper-slide',function(){
+            $('.modal-custom').removeClass('hide')
+        })
+    }); 
 </script>
 {% endblock %}

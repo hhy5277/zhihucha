@@ -8,3 +8,7 @@ $(document).on('click', '.number-pag > .button', function () {
         $input.val(num - 1)
     }
 })
+
+$(document).on('click','.modal-custom',function(e){
+    $(this).addClass('hide')
+})
